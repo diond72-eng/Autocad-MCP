@@ -104,7 +104,7 @@ full = [
     "openpyxl>=3.1",
 ]
 
-professional = ["PyMuPDF>=1.26,<2", "Pillow>=11,<14", "mcp>=1.29,<2"]
+professional = ["PyMuPDF==1.26.6", "Pillow==13.0.0", "mcp>=1.29,<2"]
 
 [project.scripts]
 professional-cad = "professional_cad.__main__:main"
@@ -164,7 +164,7 @@ target-version = "py311"
 # change what the document says was written. The premium skill is the same case:
 # its code blocks are tool-call illustrations restored verbatim, and the plugin's
 # copy must stay byte-equal to it (scripts/build_plugin.py --check).
-extend-exclude = ["docs/superpowers", ".claude/skills", "plugin/skills"]
+extend-exclude = ["docs/superpowers", ".claude/skills", "plugin/skills", "professional_cad/assets/fonts/Source"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "W", "UP", "B"]
