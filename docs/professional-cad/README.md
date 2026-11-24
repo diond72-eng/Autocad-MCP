@@ -99,3 +99,8 @@ family and `geometry.py` to add projections. Keep input truth out of
 mapping, and validate them with the profile. Change a published style via a new
 versioned profile and regression review. See the capability register before
 promising a new discipline or conversion.
+
+For container-only use, build `Dockerfile.professional-cad`. In a managed
+environment with a trusted custom CA, pass
+`--secret id=build_ca_bundle,src=/etc/ssl/certs/ca-certificates.crt` with
+BuildKit. The bundle stays outside the resulting image.

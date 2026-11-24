@@ -43,7 +43,7 @@ def front(view, parts, internal=False, rear=False):
                 or role == "top"
             )
         if show:
-            draw_box(view, part, (0, 2))
+            draw_box(view, part, (0, 2), "JOINERY" if part.layer == "JCUT" else part.layer)
 
 
 def project_iso(view, parts, explode=False):

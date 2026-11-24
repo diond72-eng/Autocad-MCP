@@ -21,11 +21,15 @@ def scale(width, height, paper_w, paper_h):
     return next((s for s in SCALES if s >= required), SCALES[-1])
 
 
-def room_plan(v, project):
-    v.rect(0, 0, project.width, project.depth, "CUT")
+def room_plan(v, project, depth=None):
+    depth = depth or project.depth
+    if depth == project.depth:
+        v.rect(0, 0, project.width, depth, "CUT")
+    else:
+        v.poly([(0, depth), (0, 0), (project.width, 0), (project.width, depth)], "CUT")
     v.faced(0, -100, project.width, 100, "CUT", "ANSI31", v.s * 1.65)
-    v.faced(-100, 0, 100, project.depth, "CUT", "ANSI31", v.s * 1.65)
-    v.faced(project.width, 0, 100, project.depth, "CUT", "ANSI31", v.s * 1.65)
+    v.faced(-100, 0, 100, depth, "CUT", "ANSI31", v.s * 1.65)
+    v.faced(project.width, 0, 100, depth, "CUT", "ANSI31", v.s * 1.65)
 
 
 def service_plan(v, items):
@@ -43,14 +47,28 @@ def service_plan(v, items):
 def layout_package(project, parts):
     api = API()
     a = api.sheet("J101", "DIMENSIONED PLAN AND FRONT ELEVATION")
-    s = max(
-        scale(project.width + 650, project.ceiling + 485, 310, 151),
-        scale(project.width + 650, project.depth + 310, 310, 53),
-    )
+    if project.cabinets:
+        plan_depth = min(
+            project.depth, max(c.y + c.depth + c.front for c in project.cabinets) + 330
+        )
+        s = max(
+            scale(project.width + 650, project.ceiling + 145, 290, 149),
+            scale(project.width + 650, plan_depth + 190, 290, 58),
+        )
+        plan_y, plan_h, elev_h = 201, 70, 157
+        plan_label = "JOINERY PLAN"
+    else:
+        plan_depth = project.depth
+        s = max(
+            scale(project.width + 550, project.depth + 450, 290, 120),
+            scale(project.width + 550, project.ceiling + 410, 290, 95),
+        )
+        plan_y, plan_h, elev_h = 143, 128, 102
+        plan_label = "ROOM PLAN"
     x0 = -8 * s
-    p = api.view(a, 15, 209, 319, 62, s, "GENERAL PLAN", (x0, -9 * s))
+    p = api.view(a, 15, plan_y, 319, plan_h, s, plan_label, (x0, -8.0 * s))
     p.flip_plan()
-    room_plan(p, project)
+    room_plan(p, project, plan_depth)
     cut = max(
         150,
         min(
@@ -59,13 +77,33 @@ def layout_package(project, parts):
         ),
     )
     section(p, parts, (0, 1), 2, cut)
-    service_plan(p, project.services)
+    service_plan(p, [item for item in project.services if item.y <= plan_depth])
     p.dim((0, 0), (project.width, 0), (0, -6.5 * s))
-    if project.depth / s > 7:
-        p.dim((0, 0), (0, project.depth), (-5.5 * s, 0), 90)
-    f = api.view(a, 15, 29, 319, 163, s, "FRONT ELEVATION", (x0, -8 * s))
+    if plan_depth == project.depth:
+        p.dim((0, 0), (0, plan_depth), (-5.5 * s, 0), 90)
+    f = api.view(a, 15, 29, 319, elev_h, s, "FRONT ELEVATION", (x0, -8 * s))
     f.rect(0, 0, project.width, project.ceiling, "CUT")
     front(f, parts)
+    if not project.cabinets:
+        for item in project.services:
+            layer = "POWER" if item.kind in ("power", "light") else "WATER"
+            f.circ(item.x, item.z, 1.2 * s, layer)
+            f.label(item.id, item.x + 1.6 * s, item.z - 2 * s, 1.95)
+    if project.width / s < 215:
+        api.notes(
+            a,
+            251,
+            184 if project.cabinets else 126,
+            "SET-OUT DATUM",
+            [
+                "X0 LEFT FINISHED WALL",
+                "Y0 REAR FINISHED WALL",
+                "Z0 FINISHED FLOOR",
+                "CONFIRM SITE DIMENSIONS",
+                "REFER G001 FOR SCHEDULES",
+            ],
+            4.5,
+        )
     low = [c for c in project.cabinets if c.z < 500]
     stations = [n for c in low for n in (c.x, c.x + c.width)]
     for begin, end in merged_chain(stations):
@@ -80,7 +118,7 @@ def layout_package(project, parts):
         f.ref(focus.x + focus.width * 0.48, focus.z + focus.height * 0.42, "A", "J102")
         p.ref(
             focus.x + focus.width * 0.48,
-            min(project.depth - 3.7 * s, focus.y + focus.depth + 5 * s),
+            min(plan_depth - 2.0 * s, focus.y + focus.depth + 4 * s),
             "A",
             "J102",
         )
@@ -130,7 +168,8 @@ def layout_package(project, parts):
         project_iso(
             iso, [replace(part, x=part.x - focus.x, y=part.y - focus.y) for part in focus_parts]
         )
-    a = api.sheet("G001", "DRAWING REGISTER AND SCHEDULES")
+    register = api.sheet("G001", "DRAWING REGISTER AND SCHEDULES")
+    a = register
     rows = [(c.id, c.kind, c.x, c.y, c.z, c.width, c.depth, c.height) for c in project.cabinets]
     if rows:
         for start in range(0, len(rows), 22):
@@ -192,6 +231,27 @@ def layout_package(project, parts):
                 [0, 37, 100, 155, 210, 310],
                 6,
             )
+    api.table(
+        register,
+        "ISSUE REGISTER",
+        ["SHEET", "TITLE", "REV"],
+        [(layout.name, api.info[layout.name][0], project.revision) for layout in api.layouts],
+        15,
+        71,
+        [0, 25, 220, 310],
+        5.5,
+    )
+    if not rows:
+        api.table(
+            register,
+            "ROOM DATUM / MM",
+            ["WIDTH", "DEPTH", "CEILING"],
+            [(project.width, project.depth, project.ceiling)],
+            15,
+            257,
+            [0, 45, 90, 160],
+            6.4,
+        )
     api.d.appids.new("PROCAD")
     assembly = api.d.blocks.new("PROCAD-COMPONENT-ASSEMBLY")
     for part in parts:
