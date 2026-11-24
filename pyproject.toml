@@ -104,7 +104,11 @@ full = [
     "openpyxl>=3.1",
 ]
 
+professional = ["PyMuPDF>=1.26,<2", "Pillow>=11,<14", "mcp>=1.29,<2"]
+
 [project.scripts]
+professional-cad = "professional_cad.__main__:main"
+professional-cad-mcp = "professional_cad.mcp_server:main"
 autocad-mcp = "server:main"
 # Alias matching the PyPI distribution name so `uvx autocad-mcp-pro` works
 # without a --from indirection (MCP registry / uvx convention).
@@ -149,6 +153,7 @@ only-include = [
     "engineering",
     "discovery",
     "templates",
+    "professional_cad",
 ]
 
 [tool.ruff]
