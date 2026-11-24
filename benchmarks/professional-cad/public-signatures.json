@@ -1,0 +1,131 @@
+{
+  "kitchen": [
+    {
+      "drawings": 339,
+      "text": "",
+      "images": 0,
+      "render_sha256": "125f68cebfdd642b9aa0f2cb0cc60d493495ab7f46f77d06a8f1654cabf8312b",
+      "vector_sha256": "a273b5b75e4ec2c4a1eb87f40d47b9907e4740d3802bafaca37c4db4d22cff19"
+    },
+    {
+      "drawings": 360,
+      "text": "",
+      "images": 0,
+      "render_sha256": "4a076d5e64246aec645c6c65dc38d1f9c8292c2101f8d408e337b7a435afd47e",
+      "vector_sha256": "a52612dc1aff96d3d9c4639c6cd06fba524c6adcc5fdb9840dc85465177d8154"
+    },
+    {
+      "drawings": 109,
+      "text": "",
+      "images": 0,
+      "render_sha256": "ea34760679ea4a96782cb70cc211c85e073f38f2c2169efc140a727c2768a75d",
+      "vector_sha256": "8751e751709a31486a679b20d6163f830b2cdeeb95f6a7b1deb2ec9a2567287f"
+    },
+    {
+      "drawings": 89,
+      "text": "",
+      "images": 0,
+      "render_sha256": "780f7401140d65898b3a2b9fdfa15440644957dff7109396ff773a0f46baff0e",
+      "vector_sha256": "37372c43729a5599915b9877453da3d0dbc325de6d774dc72429913e524ca93d"
+    }
+  ],
+  "room-services": [
+    {
+      "drawings": 115,
+      "text": "",
+      "images": 0,
+      "render_sha256": "ddaf06764b8bd7c6cc4e67d0bf58bc261019e4e8c3728f62aa5a31a4c8e00872",
+      "vector_sha256": "8dc392701bb34796c4be63e5fee79735b0a4d0f1b21a85cd5a14781c8dd91b02"
+    },
+    {
+      "drawings": 59,
+      "text": "",
+      "images": 0,
+      "render_sha256": "518b4a376f7926842f4c5bfe22593ab712655bf0df264420aacdd5c179ac3fd9",
+      "vector_sha256": "4014f3d96cc21b647ab080ca620b04c83dd3151534f016547450589fdfccb4d2"
+    },
+    {
+      "drawings": 112,
+      "text": "",
+      "images": 0,
+      "render_sha256": "855c408065899e4be578a62d0f091ea94924743add1651ad650e062bb95d9a7d",
+      "vector_sha256": "f101ba418cf6f32e04edfbaaae372d36f5896d1232ef5acda861e3db4606a086"
+    }
+  ],
+  "utility": [
+    {
+      "drawings": 275,
+      "text": "",
+      "images": 0,
+      "render_sha256": "a3fa81c02b7d2b2b89f8c459e315de1d9a02d23983d504f0ea08db1109f51abb",
+      "vector_sha256": "c10fd851c5aec61b78de3e7afb438553149a36436d38e7a228dc85d38d593b06"
+    },
+    {
+      "drawings": 306,
+      "text": "",
+      "images": 0,
+      "render_sha256": "bc92eb1aac8fee8202dc8d4e2bf4ed56e1fa7e4de51f93099a61089539073ca8",
+      "vector_sha256": "3fbedda9a863ba01173f01bf5572f13df4215315ce01ab4fea53c9302ca4011d"
+    },
+    {
+      "drawings": 96,
+      "text": "",
+      "images": 0,
+      "render_sha256": "9046c2f19a92cce50c580d54c92b71797e9969bfb1accf0d1dcb42e24721c77d",
+      "vector_sha256": "2f639568143ae999baeffb7901f3fdac82ea04da0f0254b0a280931e72ec4042"
+    }
+  ],
+  "vanity": [
+    {
+      "drawings": 187,
+      "text": "",
+      "images": 0,
+      "render_sha256": "6ab296ef845d0a8f8cb49abcb3c0097319b713913c51ed0867cc092b8a6703fb",
+      "vector_sha256": "07743832ce4b6fd1ac92ed02639968e6f9e80ec4f058645bc5b0ee34a4a9c5df"
+    },
+    {
+      "drawings": 228,
+      "text": "",
+      "images": 0,
+      "render_sha256": "e2077df79cba1036017add46e6155a884cb5a31b4875929fec4fe7f212a59f95",
+      "vector_sha256": "ebc04077ba507b830e9daff84e761ca0b54f9d3a3fa1d3cd41d0ac2b14ca01d2"
+    },
+    {
+      "drawings": 82,
+      "text": "",
+      "images": 0,
+      "render_sha256": "c6972f8201e60922a93a2437ec36a262d4dbd446620a8b45d9f2bd6995a1096b",
+      "vector_sha256": "9b223f5af7ef311b5a8da347cbc95d0cdd83cf6ee02de940ac325b42c940ef98"
+    },
+    {
+      "drawings": 82,
+      "text": "",
+      "images": 0,
+      "render_sha256": "840d608ddc2aacd24702ec6351e13537eca9a73fbf67960ffe7746a38139863c",
+      "vector_sha256": "58a582d8ffaeeca8221b11dc4ca37fe5d66ee14114baa5814d5c1541f05a5a15"
+    }
+  ],
+  "wardrobe": [
+    {
+      "drawings": 249,
+      "text": "",
+      "images": 0,
+      "render_sha256": "ab5b38966f21fb1cf00c492a89579bc1f4a953e64ab1db4e459998cda8b20624",
+      "vector_sha256": "dd0fb95311ecedcc2ba721773657cbdf2b69920541f938f726ac318d243e5ec9"
+    },
+    {
+      "drawings": 329,
+      "text": "",
+      "images": 0,
+      "render_sha256": "ebd8badc8ea308eb3ed0d3f84ad36ea8e8c9751c5d3d69937b13c88f5a8ce8f4",
+      "vector_sha256": "d6b9f7e64022a8b1e93b4b4c60634dd36db0035e4f90e3d4cfd4c8e2d96b694b"
+    },
+    {
+      "drawings": 87,
+      "text": "",
+      "images": 0,
+      "render_sha256": "ef5075da4c2f83a565ea49c0c0a9f9002ba2e5b62b43da5849d9bdfb84db4f21",
+      "vector_sha256": "6f68f8c096d725501b33a842bf061887215d28eed426b0d8dacfa6b6e1f66c68"
+    }
+  ]
+}

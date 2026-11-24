@@ -21,3 +21,10 @@ geometry and coordinate schedules. They still need project-specific trade
 detailing for an approved manufacturing or build issue. The generic engine
 has not reproduced the complete private job through its new schema, and the
 current capabilities therefore support a preview release.
+
+Clean-checkout installation, all five anonymised job generations, the stdio
+sidecar read-back, the upstream ezdxf MCP handshake and the locked Linux
+regressions were exercised. An isolated Codex CLI invocation was attempted
+separately. This host returned a read-only filesystem error at app-server
+initialisation; only the automated clean-checkout acceptance was run to
+completion. The browser plugin install is also unverified.
