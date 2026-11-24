@@ -1,0 +1,80 @@
+{
+  "title": "KITCHEN K-01",
+  "width": 3480,
+  "depth": 1960,
+  "ceiling": 2700,
+  "cabinets": [
+    {
+      "id": "B01",
+      "kind": "drawer",
+      "x": 80,
+      "width": 750,
+      "depth": 580,
+      "height": 720,
+      "z": 155,
+      "doors": 0,
+      "drawers": 3
+    },
+    {
+      "id": "S01",
+      "kind": "sink",
+      "x": 830,
+      "width": 900,
+      "depth": 580,
+      "height": 720,
+      "z": 155
+    },
+    {
+      "id": "B02",
+      "kind": "base",
+      "x": 1730,
+      "width": 800,
+      "depth": 580,
+      "height": 720,
+      "z": 155,
+      "shelves": [
+        338
+      ]
+    },
+    {
+      "id": "O01",
+      "kind": "overhead",
+      "x": 830,
+      "width": 900,
+      "depth": 315,
+      "height": 710,
+      "z": 1480,
+      "shelves": [
+        330
+      ]
+    },
+    {
+      "id": "O02",
+      "kind": "overhead",
+      "x": 1730,
+      "width": 800,
+      "depth": 315,
+      "height": 710,
+      "z": 1480,
+      "shelves": [
+        330
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "W1",
+      "kind": "water",
+      "x": 1280,
+      "y": 98,
+      "z": 480
+    },
+    {
+      "id": "G1",
+      "kind": "power",
+      "x": 675,
+      "y": 95,
+      "z": 1120
+    }
+  ]
+}

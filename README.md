@@ -554,3 +554,10 @@ Built from production drawing work, then made model-agnostic through MCP.
 
 <!-- MCP registry ownership marker; must equal the "name" in server.json. -->
 mcp-name: io.github.u-c4n/autocad-mcp
+
+## Professional CAD drafting layer
+
+The optional Linux headless drafting layer produces editable mm-scale joinery
+and room-services drawings with a versioned A3 drafting profile. See the
+[quick start and user manual](docs/professional-cad/README.md) and
+[capability register](docs/professional-cad/capabilities.md).

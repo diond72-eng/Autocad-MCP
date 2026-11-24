@@ -1,0 +1,5 @@
+This is the corresponding editable font source and build script from upstream osifont.
+Upstream: https://github.com/hikikomori82/osifont
+Commit: 2e9aa86a8a09b044e08c00f5a4a2505dc3ca9f6e
+The published LGPL v3 font-exception TrueType file matches this commit byte-for-byte.
+Refer to the upstream README and the license strings embedded in the font.

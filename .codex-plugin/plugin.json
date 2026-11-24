@@ -1,0 +1,7 @@
+{
+  "name": "professional-cad",
+  "version": "1.0.0",
+  "description": "Linux headless professional joinery and architectural CAD skill",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

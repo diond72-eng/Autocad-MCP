@@ -1,0 +1,54 @@
+{
+  "title": "WARDROBE W-01",
+  "width": 2890,
+  "depth": 1770,
+  "ceiling": 2650,
+  "cabinets": [
+    {
+      "id": "W01",
+      "kind": "wardrobe",
+      "x": 75,
+      "width": 920,
+      "depth": 635,
+      "height": 2270,
+      "z": 90,
+      "shelves": [
+        255,
+        1640,
+        1950
+      ]
+    },
+    {
+      "id": "W02",
+      "kind": "wardrobe",
+      "x": 995,
+      "width": 800,
+      "depth": 635,
+      "height": 2270,
+      "z": 90,
+      "shelves": [
+        500,
+        1130,
+        1850
+      ]
+    },
+    {
+      "id": "W03",
+      "kind": "open",
+      "x": 1795,
+      "width": 860,
+      "depth": 635,
+      "height": 2270,
+      "z": 90,
+      "doors": 0,
+      "shelves": [
+        390,
+        710,
+        1080,
+        1500,
+        1890
+      ]
+    }
+  ],
+  "services": []
+}

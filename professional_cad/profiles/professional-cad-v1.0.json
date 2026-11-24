@@ -1,0 +1,171 @@
+{
+  "id": "professional-cad-v1.0",
+  "units": "mm",
+  "source": "Accepted Rev06 drafting primitives and plot configuration",
+  "font": {
+    "file": "osifont-lgpl3fe.ttf",
+    "family": "Osifont",
+    "cad_style": "ISO-JOINERY",
+    "width_factor": 0.96,
+    "fallback": null,
+    "resolution": "Explicit bundled directory registered in ezdxf font manager; fail on missing font",
+    "general_mm": 2.5,
+    "dimension_mm": 2.5,
+    "secondary_mm": 1.95,
+    "view_title_mm": 3.5,
+    "tag_mm": 2.5,
+    "rotation_deg": 0,
+    "justification": "left baseline except centered and right-aligned symbols",
+    "pdf": "PyMuPDF drawing backend renders vector glyph outlines; native TEXT/MULTILEADER retained in CAD",
+    "tracking": "font metrics"
+  },
+  "layers": {
+    "BORDER": {
+      "lineweight_hundredths_mm": 55,
+      "aci": 7
+    },
+    "CUT": {
+      "lineweight_hundredths_mm": 45,
+      "aci": 7
+    },
+    "JCUT": {
+      "lineweight_hundredths_mm": 35,
+      "aci": 7
+    },
+    "JOINERY": {
+      "lineweight_hundredths_mm": 25,
+      "aci": 7
+    },
+    "STONE": {
+      "lineweight_hundredths_mm": 25,
+      "aci": 7
+    },
+    "DETAIL": {
+      "lineweight_hundredths_mm": 18,
+      "aci": 7
+    },
+    "INTERNAL": {
+      "lineweight_hundredths_mm": 13,
+      "aci": 7
+    },
+    "ANNO": {
+      "lineweight_hundredths_mm": 13,
+      "aci": 7
+    },
+    "DIM": {
+      "lineweight_hundredths_mm": 13,
+      "aci": 7
+    },
+    "HIDDEN": {
+      "lineweight_hundredths_mm": 13,
+      "aci": 8
+    },
+    "AXIS": {
+      "lineweight_hundredths_mm": 9,
+      "aci": 8
+    },
+    "HATCH": {
+      "lineweight_hundredths_mm": 9,
+      "aci": 8
+    },
+    "BACKGROUND": {
+      "lineweight_hundredths_mm": 9,
+      "aci": 8
+    },
+    "WATER": {
+      "lineweight_hundredths_mm": 25,
+      "aci": 5
+    },
+    "WASTE": {
+      "lineweight_hundredths_mm": 25,
+      "aci": 4
+    },
+    "POWER": {
+      "lineweight_hundredths_mm": 25,
+      "aci": 6
+    },
+    "SHEET": {
+      "lineweight_hundredths_mm": 18,
+      "aci": 7
+    },
+    "VIEW": {
+      "lineweight_hundredths_mm": 0,
+      "aci": 7
+    },
+    "COMPONENTS-3D": {
+      "lineweight_hundredths_mm": 18,
+      "aci": 7
+    }
+  },
+  "linetypes": {
+    "JOINERY-HIDDEN": [
+      6,
+      4,
+      -2
+    ],
+    "JOINERY-CENTRE": [
+      16,
+      9,
+      -2,
+      3,
+      -2
+    ],
+    "segment_pitch_mm_on_paper": 2.1,
+    "segment_on_fraction": 0.65,
+    "psltscale": 1,
+    "line_cap_join": "backend defaults"
+  },
+  "dimensions": {
+    "style": "SHOP",
+    "dimtxt": 2.5,
+    "dimexo": 0.8,
+    "dimexe": 1.05,
+    "dimgap": 0.5,
+    "dimasz": 1.4,
+    "dimtad": 1,
+    "dimtih": 0,
+    "dimtoh": 0,
+    "dimzin": 8,
+    "dimdec": 0,
+    "dimdsep": 46,
+    "dimlfac": 1.0,
+    "arrow": "ARCHTICK",
+    "placement": "project view chooses bands; width strings then overall; narrow gaps use ordinate or separate details"
+  },
+  "hatches": {
+    "default": "ANSI31",
+    "back": "ANSI37",
+    "shaker_and_plinth": "ANSI32",
+    "stone": "ANSI36",
+    "boundary": "closed native HATCH paths",
+    "angle_deg": 0,
+    "scale": "spacing / 3.175",
+    "section_spacing_model_mm": "1.35 times view scale",
+    "origin": "drawing default"
+  },
+  "sheet": {
+    "width_mm": 420,
+    "height_mm": 297,
+    "border_mm": [
+      8,
+      8,
+      404,
+      281
+    ],
+    "rail_x_mm": 342,
+    "rail_width_mm": 70,
+    "drawing_header_y_mm": 277,
+    "note_pitch_mm": 4.6,
+    "view_title_offset_mm": 4.8,
+    "view_number_radius_mm": 2.9,
+    "callout_radius_mm": 3.65,
+    "scale_bar_model_mm": 500,
+    "viewport_locked": true,
+    "proof_dpi": 300
+  },
+  "plot": {
+    "style": "professional-cad.ctb",
+    "device": "vector PDF via ezdxf PyMuPDF backend",
+    "color": "supplied CTB black and subdued service classes"
+  }
+}
