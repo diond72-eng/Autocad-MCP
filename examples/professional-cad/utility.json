@@ -1,0 +1,65 @@
+{
+  "title": "UTILITY U-01",
+  "width": 3720,
+  "depth": 2050,
+  "ceiling": 2800,
+  "cabinets": [
+    {
+      "id": "C01",
+      "kind": "credenza",
+      "x": 140,
+      "width": 1150,
+      "depth": 560,
+      "height": 730,
+      "z": 130,
+      "shelves": [
+        390
+      ]
+    },
+    {
+      "id": "L01",
+      "kind": "locker",
+      "x": 1290,
+      "width": 550,
+      "depth": 560,
+      "height": 2080,
+      "z": 130,
+      "doors": 1,
+      "shelves": [
+        300,
+        1630
+      ]
+    },
+    {
+      "id": "L02",
+      "kind": "locker",
+      "x": 1840,
+      "width": 550,
+      "depth": 560,
+      "height": 2080,
+      "z": 130,
+      "doors": 1,
+      "shelves": [
+        300,
+        1630
+      ]
+    },
+    {
+      "id": "O01",
+      "kind": "open",
+      "x": 2390,
+      "width": 970,
+      "depth": 460,
+      "height": 2090,
+      "z": 130,
+      "doors": 0,
+      "shelves": [
+        450,
+        860,
+        1260,
+        1660
+      ]
+    }
+  ],
+  "services": []
+}

@@ -1,0 +1,48 @@
+{
+  "title": "VANITY V-01",
+  "width": 2100,
+  "depth": 1700,
+  "ceiling": 2500,
+  "cabinets": [
+    {
+      "id": "V01",
+      "kind": "vanity",
+      "x": 180,
+      "width": 820,
+      "depth": 490,
+      "height": 620,
+      "z": 220,
+      "doors": 2,
+      "service_void": 45,
+      "body_material": "MR01"
+    },
+    {
+      "id": "V02",
+      "kind": "drawer",
+      "x": 1000,
+      "width": 680,
+      "depth": 490,
+      "height": 620,
+      "z": 220,
+      "doors": 0,
+      "drawers": 2,
+      "body_material": "MR01"
+    }
+  ],
+  "services": [
+    {
+      "id": "W1",
+      "kind": "water",
+      "x": 530,
+      "y": 80,
+      "z": 510
+    },
+    {
+      "id": "G1",
+      "kind": "power",
+      "x": 1510,
+      "y": 120,
+      "z": 1050
+    }
+  ]
+}
